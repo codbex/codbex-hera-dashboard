@@ -1,6 +1,19 @@
 {
     "guid": "codbex-hera",
-    "dependencies": [],
+    "dependencies": [
+        {
+            "guid": "codbex-employees",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-employees.git",
+            "branch": "main"
+        }
+          {
+            "guid": "codbex-branding",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-branding.git",
+            "branch": "main"
+        }
+    ],
     "actions": [
         {
             "name": "Build TypeScript",

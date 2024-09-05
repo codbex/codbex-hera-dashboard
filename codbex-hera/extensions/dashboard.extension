@@ -1,0 +1,5 @@
+{
+    "module": "codbex-hera/services/dashboard.js",
+    "extensionPoint": "ide-view",
+    "description": "Dashboard View"
+}
