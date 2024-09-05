@@ -18,11 +18,12 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
     $scope.sections = [
 
         {
-            "name": "Settings", "groups": [
+            "name": "Business", "groups": [
                 {
-                    "name": "Company", "expanded": "configurationsExpanded", "icon": "wrench",
+                    "name": "Company", "expanded": "configurationsExpanded", "icon": "building",
                     "items": [
-                        { "name": "Companies", "view": "companies" }
+                        { "name": "Companies", "view": "companies" },
+                        { "name": "Organizations", "view": "organizations" }
                     ]
                 }
             ]
