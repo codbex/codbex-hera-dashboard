@@ -23,7 +23,19 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
                     "name": "Company", "expanded": "configurationsExpanded", "icon": "building",
                     "items": [
                         { "name": "Companies", "view": "companies" },
-                        { "name": "Organizations", "view": "organizations" }
+                        { "name": "Organizations", "view": "organizations" },
+                        { "name": "Teams", "view": "teams" }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Personnel", "groups": [
+                {
+                    "name": "Employees", "expanded": "configurationsExpanded", "icon": "people-connected",
+                    "items": [
+                        { "name": "Employees", "view": "employees" },
+                        { "name": "Jobs", "view": "jobs" }
                     ]
                 }
             ]
