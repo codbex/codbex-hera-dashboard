@@ -1,0 +1,5 @@
+{
+    "module": "codbex-hera/services/jobs.js",
+    "extensionPoint": "ide-subview",
+    "description": "Jobs Subview"
+}

@@ -1,0 +1,5 @@
+{
+    "module": "codbex-hera/services/contracts.js",
+    "extensionPoint": "ide-subview",
+    "description": "Contracts Subview"
+}

@@ -1,0 +1,45 @@
+{
+    "guid": "codbex-hera",
+    "dependencies": [
+        {
+            "guid": "codbex-employees",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-employees.git",
+            "branch": "main"
+        },
+        {
+            "guid": "codbex-branding",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-branding.git",
+            "branch": "main"
+        },
+        {
+            "guid": "codbex-number-generator",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-number-generator.git",
+            "branch": "main"
+        },
+        {
+            "guid": "codbex-hera-data-sample",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-hera-data-sample.git",
+            "branch": "main"
+        }
+    ],
+    "actions": [
+        {
+            "name": "Build TypeScript",
+            "commands": [
+                {
+                    "os": "unix",
+                    "command": "tsc"
+                },
+                {
+                    "os": "windows",
+                    "command": "cmd /c tsc"
+                }
+            ],
+            "registry": "true"
+        }
+    ]
+}
