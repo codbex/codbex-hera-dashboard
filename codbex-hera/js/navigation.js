@@ -34,8 +34,8 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
                 {
                     "name": "Employees", "expanded": "configurationsExpanded", "icon": "people-connected",
                     "items": [
-                        { "name": "Contracts", "view": "contracts" },
                         { "name": "Employees", "view": "employees" },
+                        { "name": "Documents", "view": "contracts" },
                         { "name": "Jobs", "view": "jobs" }
                     ]
                 }
