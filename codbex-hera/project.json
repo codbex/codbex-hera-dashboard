@@ -18,12 +18,6 @@
             "type": "git",
             "url": "https://github.com/codbex/codbex-number-generator.git",
             "branch": "main"
-        },
-        {
-            "guid": "codbex-hera-data-sample",
-            "type": "git",
-            "url": "https://github.com/codbex/codbex-hera-data-sample.git",
-            "branch": "main"
         }
     ],
     "actions": [
