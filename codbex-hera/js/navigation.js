@@ -40,6 +40,16 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
                     ]
                 }
             ]
+        },
+        {
+            "name": "Payments", "groups": [
+                {
+                    "name": "Salaries", "expanded": "configurationsExpanded", "icon": "people-connected",
+                    "items": [
+                        { "name": "Salaries", "view": "salaries" }
+                    ]
+                }
+            ]
         }
     ];
 
