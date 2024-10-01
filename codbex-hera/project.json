@@ -24,6 +24,12 @@
             "type": "git",
             "url": "https://github.com/codbex/codbex-salaries.git",
             "branch": "main"
+        },
+        {
+            "guid": "codbex-payrolls",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-payrolls.git",
+            "branch": "main"
         }
     ],
     "actions": [
