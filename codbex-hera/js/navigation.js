@@ -47,7 +47,8 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
                     "name": "Salaries", "expanded": "configurationsExpanded", "icon": "people-connected",
                     "items": [
                         { "name": "Salaries", "view": "salaries" },
-                        { "name": "Payrolls", "view": "payrolls" }
+                        { "name": "Payrolls", "view": "payrolls" },
+                        { "name": "Employee payments", "view": "employee-payment" }
                     ]
                 }
             ]
