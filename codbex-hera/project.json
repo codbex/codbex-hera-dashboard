@@ -8,6 +8,12 @@
             "branch": "main"
         },
         {
+            "guid": "codbex-hera-print",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-hera-print.git",
+            "branch": "main"
+        },
+        {
             "guid": "codbex-branding",
             "type": "git",
             "url": "https://github.com/codbex/codbex-branding.git",
