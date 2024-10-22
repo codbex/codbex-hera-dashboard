@@ -52,6 +52,16 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
                     ]
                 }
             ]
+        },
+        {
+            "name": "Reports", "groups": [
+                {
+                    "name": "Employee", "expanded": "configurationsExpanded", "icon": "expense-report",
+                    "items": [
+                        { "name": "Employee Salaries", "view": "employee-salaries-report" }
+                    ]
+                }
+            ]
         }
     ];
 
