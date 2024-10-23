@@ -1,0 +1,5 @@
+{
+    "module": "codbex-hera/services/employee-contacts-report.js",
+    "extensionPoint": "ide-subview",
+    "description": "Employee Contacts Report View"
+}

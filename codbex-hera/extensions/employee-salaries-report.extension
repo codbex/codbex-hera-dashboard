@@ -1,5 +1,5 @@
 {
     "module": "codbex-hera/services/employee-salaries-report.js",
     "extensionPoint": "ide-subview",
-    "description": "Employee Salaeies Report View"
+    "description": "Employee Salaries Report View"
 }
