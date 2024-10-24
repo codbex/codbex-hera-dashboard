@@ -1,8 +1,8 @@
 const viewData = {
-    id: "codbex-hera-reports",
+    id: "codbex-hera-employee-salaries-report",
     label: "Report",
     lazyLoad: true,
-    link: "/services/web/codbex-hera-reports/EmployeeSalaries/gen/employee-salaries-report/ui/Reports/index.html?embedded"
+    link: "/services/web/codbex-hera-employee-salaries-report/gen/employee-salaries-report/ui/Reports/index.html?embedded"
 };
 if (typeof exports !== 'undefined') {
     exports.getView = function () {

@@ -1,8 +1,8 @@
 const viewData = {
-    id: "codbex-hera-reports",
+    id: "codbex-hera-employee-contacts-report",
     label: "Report",
     lazyLoad: true,
-    link: "/services/web/codbex-hera-reports/EmployeeContacts/gen/employee-contacts/ui/Reports/index.html?embedded"
+    link: "/services/web/codbex-hera-employee-contacts-report/gen/employee-contacts/ui/Reports/index.html?embedded"
 };
 if (typeof exports !== 'undefined') {
     exports.getView = function () {
