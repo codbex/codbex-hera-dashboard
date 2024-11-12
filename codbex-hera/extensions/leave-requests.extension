@@ -1,0 +1,5 @@
+{
+    "module": "codbex-hera/services/leave-requests.js",
+    "extensionPoint": "ide-subview",
+    "description": "Leave Requests Subview"
+}
