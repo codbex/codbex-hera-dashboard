@@ -38,13 +38,13 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
 
     $scope.groups = [
         {
-            "label": "Company", "expanded": "companyExpanded", "icon": "building"
+            "label": "Companies", "expanded": "configurationsExpanded", "icon": "building"
         },
         {
             "label": "Employees", "expanded": "employeesExpanded", "icon": "people-connected"
         },
         {
-            "label": "Salaries", "expanded": "salesExpanded", "icon": "people-connected"
+            "label": "Salaries", "expanded": "salariesExpanded", "icon": "people-connected"
         }
     ]
     $http.get("http://localhost:8080/services/ts/codbex-hera/api/NavigationExtension/NavigationService.ts")

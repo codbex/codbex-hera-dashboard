@@ -30,24 +30,20 @@
                             </fd-list-navigation-item-icon>
                             <span fd-list-navigation-item-text>Dashboard</span>
                         </fd-list-navigation-item>
-                        <div ng-repeat="section in sections">
-                            <fd-list-navigation-group-header>{{section.name}}</fd-list-navigation-group-header>
-                            <div ng-repeat="group in section.groups">
-                                <fd-list-navigation-item ng-init="group.expanded = false" expandable="true"
-                                    ng-click="group.expanded = !group.expanded" is-expanded="group.expanded">
-                                    <fd-list-navigation-item-icon glyph="sap-icon--{{group.icon}}">
-                                    </fd-list-navigation-item-icon>
-                                    <span fd-list-navigation-item-text>{{group.name}}</span>
-                                    <fd-list-navigation-item-arrow aria-label="expand submenu"
-                                        is-expanded="group.expanded">
-                                    </fd-list-navigation-item-arrow>
-                                    <fd-list ng-repeat="item in group.items">
-                                        <fd-list-navigation-item ng-click="switchView(item.view, $event)">
-                                            <span fd-list-navigation-item-text>{{item.name}}</span>
-                                        </fd-list-navigation-item>
-                                    </fd-list>
-                                </fd-list-navigation-item>
-                            </div>
+                        <div ng-repeat="group in groups" ng-show="groupItems[group.label.toLowerCase()].length > 0">
+                            <fd-list-navigation-item ng-init="group.expanded = false" expandable="true"
+                                ng-click="group.expanded = !group.expanded" is-expanded="group.expanded">
+                                <fd-list-navigation-item-icon glyph="sap-icon--{{group.icon}}">
+                                </fd-list-navigation-item-icon>
+                                <span fd-list-navigation-item-text>{{group.label}}</span>
+                                <fd-list-navigation-item-arrow aria-label="expand submenu" is-expanded="group.expanded">
+                                </fd-list-navigation-item-arrow>
+                                <fd-list ng-repeat="item in groupItems[group.label.toLowerCase()]">
+                                    <fd-list-navigation-item ng-click="switchView(item.view, $event)">
+                                        <span fd-list-navigation-item-text>{{item.label}}</span>
+                                    </fd-list-navigation-item>
+                                </fd-list>
+                            </fd-list-navigation-item>
                         </div>
 
                     </fd-list>
@@ -57,36 +53,18 @@
             <embedded-view class="dg-fill-parent" view-id="codbex-hera-dashboard" dg-type="normal"
                 ng-show="currentViewId === 'dashboard'">
             </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-companies" dg-type="subview"
-                ng-show="currentViewId === 'companies'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-organizations" dg-type="subview"
-                ng-show="currentViewId === 'organizations'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-teams" dg-type="subview"
-                ng-show="currentViewId === 'teams'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-employees" dg-type="subview"
-                ng-show="currentViewId === 'employees'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-jobs" dg-type="subview"
-                ng-show="currentViewId === 'jobs'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-employee-contracts" dg-type="subview"
-                ng-show="currentViewId === 'employee-contracts'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-salaries" dg-type="subview"
-                ng-show="currentViewId === 'salaries'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-payrolls" dg-type="subview"
-                ng-show="currentViewId === 'payrolls'">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-employee-payment" dg-type="subview"
-                ng-show="currentViewId === 'employee-payment' ">
-            </embedded-view>
-            <embedded-view class="dg-fill-parent" view-id="codbex-hera-leave-requests" dg-type="subview"
-                ng-show="currentViewId === 'leave-requests' ">
-            </embedded-view>
+
+            <div ng-show="currentViewId !== 'dashboard'" class="dg-fill-parent">
+                <div class="dg-fill-parent" ng-repeat="group in groups" ng-show="isGroupVisible(group)">
+                    <div class="dg-fill-parent" ng-repeat="item in groupItems[group.label.toLowerCase()]"
+                        ng-show="currentViewId === '{{item.view}}'">
+                        <iframe class="dg-fill-parent" ng-src="{{item.link}}" dg-type="normal"
+                            ng-show="currentViewId === '{{item.view}}'" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <ide-dialogs extension-points="::extraExtensionPoints"></ide-dialogs>
