@@ -24,27 +24,19 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
     }, true)
 
     $scope.groupItems = [];
-    $scope.groupItems["companies"] = [];
-    $scope.groupItems["organizations"] = [];
-    $scope.groupItems["teams"] = [];
     $scope.groupItems["employees"] = [];
-    $scope.groupItems["employee-contracts"] = [];
-    $scope.groupItems["jobs"] = [];
-    $scope.groupItems["leave-requests"] = [];
+    $scope.groupItems["configurations"] = [];
     $scope.groupItems["salaries"] = [];
-    $scope.groupItems["payrolls"] = [];
-    $scope.groupItems["employee-payment"] = [];
-
 
     $scope.groups = [
-        {
-            "label": "Companies", "expanded": "configurationsExpanded", "icon": "building"
-        },
         {
             "label": "Employees", "expanded": "employeesExpanded", "icon": "people-connected"
         },
         {
-            "label": "Salaries", "expanded": "salariesExpanded", "icon": "people-connected"
+            "label": "Configurations", "expanded": "configurationsExpanded", "icon": "building"
+        },
+        {
+            "label": "Salaries", "expanded": "salariesExpanded", "icon": "money-bills"
         }
     ]
     $http.get("http://localhost:8080/services/ts/codbex-hera/api/NavigationExtension/NavigationService.ts")
@@ -54,7 +46,6 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
             $scope.navigationList.forEach(e => addNavigationItem(e));
 
             $scope.groupItems.forEach(e => e.sort((a, b) => a.orderNumber - b.orderNumber));
-
         })
         .catch(function (error) {
             console.error('Error fetching navigation list:', error);
