@@ -29,15 +29,9 @@ navigation.controller("LaunchpadViewController", ["$scope", "messageHub", "$http
     $scope.groupItems["salaries"] = [];
 
     $scope.groups = [
-        {
-            "label": "Employees", "expanded": "employeesExpanded", "icon": "people-connected"
-        },
-        {
-            "label": "Configurations", "expanded": "configurationsExpanded", "icon": "building"
-        },
-        {
-            "label": "Salaries", "expanded": "salariesExpanded", "icon": "money-bills"
-        }
+        { "label": "Employees", "icon": "people-connected" },
+        { "label": "Configurations", "icon": "building" },
+        { "label": "Salaries", "icon": "money-bills" }
     ]
     $http.get("http://localhost:8080/services/ts/codbex-hera/api/NavigationExtension/NavigationService.ts")
         .then(function (response) {
