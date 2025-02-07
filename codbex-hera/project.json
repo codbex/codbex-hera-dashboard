@@ -14,9 +14,9 @@
             "branch": "main"
         },
         {
-            "guid": "codbex-hera-print",
+            "guid": "codbex-templates",
             "type": "git",
-            "url": "https://github.com/codbex/codbex-hera-print.git",
+            "url": "https://github.com/codbex/codbex-templates.git",
             "branch": "main"
         },
         {
