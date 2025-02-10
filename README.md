@@ -17,7 +17,7 @@ Hera is an effective system designed to manage and streamline all aspects of hum
 
 ## Getting started
 
-To get started with Hera, please refer to the [User Guide]() usage guidelines.
+To get started with Hera, please refer to the [User Guide](https://github.com/codbex/codbex-hera-dashboard/wiki/User-Guide) usage guidelines.
 
 You can also find test data here:
 
