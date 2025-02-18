@@ -44,6 +44,18 @@
             "branch": "main"
         },
         {
+            "guid": "codbex-jobs",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-jobs.git",
+            "branch": "main"
+        },
+        {
+            "guid": "codbex-contracts",
+            "type": "git",
+            "url": "https://github.com/codbex/codbex-contracts.git",
+            "branch": "main"
+        },
+        {
             "guid": "codbex-payrolls",
             "type": "git",
             "url": "https://github.com/codbex/codbex-payrolls.git",
